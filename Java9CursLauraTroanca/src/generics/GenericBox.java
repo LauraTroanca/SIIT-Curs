@@ -19,4 +19,10 @@ public class GenericBox<T> {
         this.content = content;
     }
     
+    public <U extends Number> void inspect(U u){
+System.out.println("T: " + content.getClass().getName());
+System.out.println("U: " + u.getClass().getName());
+}
+
+    
 }
