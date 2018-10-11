@@ -45,13 +45,39 @@ System.out.format("The tangent of %.1f " + "degrees is %.4f%n",degrees, Math.tan
 
 // random number generated between 0.0 and 0.1 and multiplied with 10
 int randomNumber = (int)(Math.random() * 10);
-System.out.println(randomNumber + "is a random number");
+System.out.println(randomNumber + " is a random number");
 randomNumber = (int)(Math.random() * 10);
-System.out.println(randomNumber + "is a random number");
+System.out.println(randomNumber + " is a random number");
 randomNumber = (int)(Math.random() * 10);
-System.out.println(randomNumber + "is a random number");
-}
+System.out.println(randomNumber + " is a random number");
 
+
+        String salut="Hello "+"world!";
+        System.out.println(salut);
+
+        String s1="Buna ";
+        String s2="ziua!";
+        System.out.println(s1.concat(s2));
+
+        String hi = "Hi, ";
+        String mom = "mom.";
+        String text = hi + mom;
+        System.out.println(text);
+        System.out.println(hi.concat(mom));
+
+        StringBuilder sb = new StringBuilder("Able was I ere I saw Elba.");
+        System.out.println(sb.length());
+        
+        String hannah = "Did Hannah see bees? Hannah did.";
+        System.out.println(hannah.length());
+        System.out.println(hannah.charAt(12));
+        int index = hannah.indexOf('b');
+        System.out.println("index of letter b is "+index);
+        
+         String ss = "Was it a car or a cat I saw?".substring(9, 12);
+         System.out.println(ss+" is "+ss.length()+" elements long.");
+  
+}
 }
     
 
