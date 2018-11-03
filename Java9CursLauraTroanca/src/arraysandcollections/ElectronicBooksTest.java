@@ -47,9 +47,8 @@ public class ElectronicBooksTest {
         arrayListForBooks.add(book2);
         arrayListForBooks.add(2,book1);
         System.out.println("----------ArrayList------------");
-        System.out.println(arrayListForBooks);
         for(ElectronicBooks str: arrayListForBooks){
-			System.out.println(str);
+			System.out.println(str.getAuthors()+", scris de "+ str.getAuthors());
         }
         
         
