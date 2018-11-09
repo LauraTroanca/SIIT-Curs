@@ -4,6 +4,8 @@
 package arraysandcollections;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 /**
  *
@@ -20,12 +22,18 @@ public class ElectronicBooksTest {
             System.out.println("Book no. "+ (x+1) + ": " + array[x].getTitle() + " , written by " + array[x].getAuthors());
         }
     }
-        
-    /**
-     *
-     * @param args
-     */
-    
+   
+    // override equal method for hashSetForBooks to check by isbn
+    @Override
+    public boolean equals(Object o){
+    boolean is = false; 
+    //code
+    //code
+    return is;
+    }
+            
+            
+            
     public static void main(String[] args) {
         
         // create 3 objects
@@ -48,10 +56,38 @@ public class ElectronicBooksTest {
         arrayListForBooks.add(2,book1);
         System.out.println("----------ArrayList------------");
         for(ElectronicBooks str: arrayListForBooks){
-			System.out.println(str.getAuthors()+", scris de "+ str.getAuthors());
+			System.out.println(str.getTitle()+", scris de "+ str.getAuthors());
         }
         
+        //create and print a LinkedList
+        LinkedList<ElectronicBooks> linkedListForBooks = new LinkedList<>();
+        linkedListForBooks.add(book3);
+        linkedListForBooks.add(book2);
+        linkedListForBooks.addFirst(book1);
+        System.out.println("----------LinkedList------------");
+        for(ElectronicBooks str: linkedListForBooks){
+			System.out.println(str.getTitle()+", scris de "+ str.getAuthors());
+        }
         
+        //create and print a HashSet
+        HashSet<ElectronicBooks> hashSetForBooks = new HashSet<>();
+        hashSetForBooks.add(book1);
+        hashSetForBooks.add(book2);
+        hashSetForBooks.add(book3);
+        System.out.println("----------HashSet------------");
+        for(ElectronicBooks str: hashSetForBooks){
+			System.out.println(str.getTitle()+", scris de "+ str.getAuthors()+", isbn: "+ str.getIsbn());
+        }
+        
+      
+        
+        
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
     
 }
