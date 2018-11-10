@@ -18,6 +18,11 @@ public class EBook extends ElectronicBooks {
         this.recommendedReader = recommendedReader;
     }
     
+    public EBook(EBookReaders recommendedReader, String title, String isbn, String authors, String electronicFormat, int yearOfPublication) {
+        super(title, authors, isbn);
+        this.recommendedReader = recommendedReader;
+    }
+    
     
     
     public enum EBookReaders {KINDLE, NOOK, SONY, HANLIN, ALEX, KOBO};

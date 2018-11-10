@@ -52,7 +52,7 @@ public class ElectronicBooksTest {
         EBook book4 = new EBook(KINDLE,"Amintiri din copilarie","Ion Creanga","1111111111111","mobi", 2010);
         
         // create and print an Array
-        ElectronicBooks[] arrayForBooks = new ElectronicBooks[10];
+        ElectronicBooks[] arrayForBooks = new ElectronicBooks[4];
         arrayForBooks[0]=book1;
         arrayForBooks[1]=book2;
         arrayForBooks[2]=book3;
