@@ -21,26 +21,26 @@ public class Multiprocess {
     public static void main(String[] args) {
         
         try {
- ProcessBuilder pb;
- // Use process builder to start 2 processes multithreading.SayHello with parameter
- pb= new ProcessBuilder(
- "java",
- "-classpath",
- "E:\\JAVA SIIT\\Git Repository\\SIIT-Curs\\Java9CursLauraTroanca\\build\\classes",
- "multithreading.SayHello",
- "2", "John", "Jane");
- Map<String, String> env = pb.environment();
- env.put("TEXT_CONGRATS", "Congratulations for starting your process! ");
- env.remove("OTHERVAR");
- env.put("TEXT_HI", "Hello ");
- pb.directory(new File(
-"E:\\JAVA SIIT\\Git Repository\\SIIT-Curs\\Java9CursLauraTroanca\\build\\classes\\multithreading")
-);
- Process p1 = pb.start();
- Process p2 = pb.start();
- } catch (IOException ex) {
- Logger.getLogger(Multiprocess.class.getName()).log(Level.SEVERE, "An IO exception is here!", ex);
- }
+             ProcessBuilder pb;
+             // Use process builder to start 2 processes multithreading.SayHello with parameter
+             pb= new ProcessBuilder(
+             "java",
+             "-classpath",
+             "E:\\JAVA SIIT\\Git Repository\\SIIT-Curs\\Java9CursLauraTroanca\\build\\classes",
+             "multithreading.SayHello",
+             "2", "John", "Jane");
+             Map<String, String> env = pb.environment();
+             env.put("TEXT_CONGRATS", " Congratulations for starting your process! ");
+             env.remove("OTHERVAR");
+             env.put("TEXT_HI", "Hello ");
+             pb.directory(new File(
+            "E:\\JAVA SIIT\\Git Repository\\SIIT-Curs\\Java9CursLauraTroanca\\build\\classes\\multithreading"));
+             Process p1 = pb.start();
+             Process p2 = pb.start();
+             } 
+        catch (IOException ex) {
+             Logger.getLogger(Multiprocess.class.getName()).log(Level.SEVERE, "An IO exception is here!", ex);
+         }
     }
     
 }
