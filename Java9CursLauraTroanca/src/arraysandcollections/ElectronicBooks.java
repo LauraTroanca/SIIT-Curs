@@ -7,7 +7,7 @@ package arraysandcollections;
  *
  * @author Troanca
  */
-public class ElectronicBooks {
+public class ElectronicBooks implements Comparable{
     
     private String title;
     private String isbn;
@@ -97,6 +97,11 @@ public class ElectronicBooks {
 
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
  
