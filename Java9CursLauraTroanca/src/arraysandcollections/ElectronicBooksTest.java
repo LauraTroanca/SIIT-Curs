@@ -7,6 +7,7 @@ import static arraysandcollections.EBook.EBookReaders.KINDLE;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.TreeSet;
 
 /**
  *
@@ -24,23 +25,7 @@ public class ElectronicBooksTest {
         }
     }
    
-    /*
-    // override equal method for hashSetForBooks to check by isbn
-    @Override
-    public boolean equals(Object o){
-    boolean is = false; 
-    //code
-    //code
-    return is;
-    }
-    
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
-            
-    */        
+         
             
     public static void main(String[] args) {
         
@@ -50,6 +35,8 @@ public class ElectronicBooksTest {
         EBook book2 = new EBook("Viata ca o prada","Marin Preda","1111111111112");
         IBook book3 = new IBook("Panza de paianjen","Cella Serghi","1111111111113"); 
         EBook book4 = new EBook(KINDLE,"Amintiri din copilarie","Ion Creanga","1111111111111","mobi", 2010);
+        EBook book5 = new EBook(KINDLE,"Ion","Liviu Rebreanu","1111111111114","mobi", 2015);
+        EBook book6 = new EBook(KINDLE,"Morometii","Marin Preda","1111111111115","mobi", 2010);
         
         // create and print an Array
         ElectronicBooks[] arrayForBooks = new ElectronicBooks[4];
@@ -97,7 +84,17 @@ public class ElectronicBooksTest {
             
         }
         
-      
+        //create and print TreeSet
+        TreeSet<ElectronicBooks> treeSetForBooks = new TreeSet<>();
+        treeSetForBooks.add(book1);
+        treeSetForBooks.add(book2);
+        treeSetForBooks.add(book3);
+        treeSetForBooks.add(book4);
+        treeSetForBooks.add(book5);
+        treeSetForBooks.add(book6);
+        for (ElectronicBooks elem : treeSetForBooks) {
+          System.out.println(elem.getTitle()+", scris de "+ elem.getAuthors()+", isbn: "+ elem.getIsbn()+" ,"+ elem.getYearOfPublication());
+        }
         
         
     }   
