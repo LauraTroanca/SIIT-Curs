@@ -7,7 +7,7 @@ package multithreading;
  *
  * @author Troanca
  */
-public class HelloAllInterface implements Runnable  {
+public class HelloAllInterface implements Runnable {
     
     
     @Override
