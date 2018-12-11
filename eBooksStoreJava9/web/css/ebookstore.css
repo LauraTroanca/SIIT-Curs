@@ -6,7 +6,7 @@ Copyright gheorgheaurelpacurar
     Copyright  : gheorgheaurelpacurar
 */
 body {
-    background-image: url('../../img/eBooksStoreBackground.jpg');
+    background-image: url('../img/eBooksStoreBackground.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: "Verdana";
@@ -63,9 +63,10 @@ table{
     color: black;
 }
 td{
-    text-align: left;
+    text-align: center;
     vertical-align: top;
     color: black;
+    width: 300px;
 }
 td.tdl td {
     text-align: left;
