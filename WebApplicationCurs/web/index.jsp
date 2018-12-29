@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="WEB-INF/tlds/cucubaw.tld" prefix="cucubaw"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,5 +14,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <cucubaw:CucuBaw mesaj="Acesta este un mesaj afisat de tagul meu."/>  
     </body>
 </html>
